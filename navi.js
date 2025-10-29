@@ -1,17 +1,17 @@
 function navi(active_button) {
 	let buttons = [
 		{
-			"url": "index",
+			"url": "index.html",
 			"text": "\u16A0",
 			"key": "home",
 		},
 		{
-			"url": "games",
+			"url": "games.html",
 			"text": "Games",
 			"key": "games",
 		},
 		{
-			"url": "engine",
+			"url": "engine.html",
 			"text": "Engine",
 			"key": "engine",
 		},
