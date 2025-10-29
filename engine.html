@@ -1,0 +1,85 @@
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="assets/icon.ico">
+<link rel="stylesheet" href="style.css">
+<script src="navi.js"></script>
+<script src="game.js"></script>
+<head>
+	<title>Engine</title>
+</head>
+<body>
+<script>navi("engine");</script>
+
+<main>
+	<div class="content">
+		<div class="top-divider"></div>
+		<div class="inner">
+			<h1>Futhark</h1>
+			<p>Futhark is my own engine written in C. I am making it as a passion project.</p>
+			<p>The name <a href="https://en.wikipedia.org/wiki/Runes#Futhark">Futhark</a> is just a code name the engine has no official name as of yet.</p>
+			<p>I came up with the name not only because I am Swedish, but it was actually originally written in the <a href="https://odin-lang.org/">Odin programming language</a>.</p>
+			<p>It has no connection to the <a href="https://futhark-lang.org/">Futhark programming language</a>, I didn't even know it existed before making this website.</p>
+		</div>
+		<div class="thick-divider"></div>
+		<div class="inner">
+			<h1>Playable Prototypes</h1>
+			<p>These are some prototypes written in this engine.</p>
+			<div class="game-container">
+				<script>
+					game("instarsect");
+					game("turtle_racing");
+					game("shackled");
+				</script>
+			</div>
+		</div>
+		<div class="thick-divider"></div>
+		<div class="inner">
+			<h1>Motivation</h1>
+			<p>When Unity declared their incredibly stupid decision to <a href="https://arstechnica.com/gaming/2023/09/game-developers-unite-against-unitys-new-per-install-pricing-structure/">pay per install</a> it was very clear I didn't want to stay.</p>
+			<p>It was around that time that I started working more seriously on the engine.</p>
+			<p>Futhark is not my first attempt at making an engine. I watched <a href="https://caseymuratori.com/">Casey Muratori</a> stream and upload making <a href="https://hero.handmade.network/">Handmade Hero</a> from scratch, using nothing but the Win32 API.</p>
+		</div>
+		<div class="thick-divider"></div>
+		<div class="inner">
+			<h1><a href="https://www.raylib.com/">Raylib</a></h1>
+			<p>As a starting point, Futhark is using <a href="https://www.raylib.com/">Raylib</a> for rendering, audio, and handling input. This is slowly but surely being factored out for my own stuff.</p>
+			<p>I love what Ramon has done and he is a huge inspiration to me.</p>
+		</div>
+		<div class="thick-divider"></div>
+		<div class="inner">
+			<h1>Libraries</h1>
+			<p>Futhark has a few utility libraries. These are made to be easily replaceable or being put into a new project.</p>
+			<p>As such, most are built as a single-header library in the style of the <a href="https://github.com/nothings/stb">stb libraries</a>.</p>
+		</div>
+		<div class="divider"></div>
+		<div class="inner">
+			<h2><a href="#code">FHOS - Futhark OS</a></h2>
+			<p>FHOS is a single-header cross-platform OS layer.</p>
+			<p>This is part of the platform layer used in the engine.</p>
+			<p>It implements allocators and a context system.</p>
+			<p>The context is a struct that is passed in as the first argument with many functions.</p>
+			<p>The context has a pointer to two allocators, one of which is meant for temporary memory.</p>
+		</div>
+		<div class="divider"></div>
+		<div class="inner">
+			<h2><a href="#code">FHFor - Futhark For Loops</a></h2>
+			<p>FHFor is a header with some for loop macros.</p>
+		</div>
+		<div class="divider"></div>
+		<div class="inner">
+			<h2><a href="#code">FHDuck - Futhark Duck Typing</a></h2>
+			<p>FHDuck is a header with macros for array functionality.</p>
+			<p>The two main "types" of FHDuck are <b>arrays</b> and <b>lists</b>.</p>
+			<ul style="margin-top: 0; margin-left: 16px; color: #EA7F3F;">
+				<li><p>Arrays have a fixed count (you can resize them, but this will realloc the data).</p></li>
+				<li><p>Lists have a dynamic count and a capacity. Only when the count exceeds the capacity, the array will realloc.</p></li>
+			</ul>
+		</div>
+		<div class="bottom-divider"></div>
+	</div>
+	<div style="height: 10%;">
+	</div>
+</main>
+
+</body>
+</html>

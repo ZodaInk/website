@@ -1,0 +1,146 @@
+body {
+	background-color: #191919;
+	font-family: "Fira Code", sans-serif;
+	word-wrap: break-word;
+	font-size: 150%;
+	color: #ECC6B3;
+	margin: 0;
+}
+
+/**/
+
+h1 {
+	text-shadow: 1px 1px #A47615;
+	margin: inherit;
+	color: #E6C66C;
+}
+
+h2 {
+	text-shadow: 1px 1px #A47615;
+	margin: inherit;
+	color: #E4C655;
+}
+
+p {
+	margin: inherit;
+	color: #AF8F7F;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #FDB50A;
+}
+a {
+	text-decoration: none;
+	color: #DD950A;
+}
+
+/**/
+
+.navi {
+	background-color: #232323;
+	width: 100%;
+}
+
+.navi ul {
+	list-style-type: none;
+	font-size: 36px;
+	display: flex;
+	padding: 0;
+	margin: 0 8px;
+	height: 64px;
+}
+
+.navi ul li {
+	background-image: linear-gradient(to top right, #002861, #006CCA);
+	border: 2px solid #00003F;
+	margin: 0 1px;
+}
+
+.navi ul li:not(.active) {
+	border-radius: 8px;
+}
+.navi ul li:hover:not(.active) {
+	background-image: linear-gradient(to bottom left, #003871, #006CCA);
+	border: 2px solid #00C6FF;
+	border-radius: 6px;
+}
+.navi ul li.active:hover {
+	background-image: linear-gradient(to bottom left, #003871, #0065A7, #00C6FF);
+	border: 2px solid #46E9FF;
+	border-radius: 0;
+}
+.navi ul li.active {
+	background-image: linear-gradient(to top right, #003871, #0065A7, #00C6FF);
+	border-radius: 4px;
+}
+
+.navi ul li a:hover {
+	text-shadow: 2px 2px #AF7913;
+	color: #EA7F3F;
+}
+.navi ul li a {
+	text-decoration: none;
+	display: block;
+	text-shadow: 2px 2px #724000;
+	color: #FFD963;
+	padding: 6px 12px;
+}
+
+/**/
+
+.content {
+	background-color: #0000007F;
+	justify-content: center;
+	border-radius: 12px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 95%;
+}
+
+.content .inner {
+	margin: 8px 8px;
+}
+
+.content .inner img {
+	max-width: 98%;
+	width: auto;
+	height: auto;
+}
+
+.top-divider {
+	height: 16px;
+}
+.divider {
+	background-color: #ECC6B32F;
+	margin: 24px 8px;
+	height: 1px;
+}
+
+.bottom-divider {
+	height: 16px;
+}
+
+.thick-divider {
+	background-color: #ECC6B35F;
+	margin: 24px 8px;
+	height: 5px;
+}
+
+.game-container {
+	display: grid;
+	margin: inherit;
+	height: auto;
+	gap: 0;
+}
+
+.game-container .game {
+	display: grid;
+	margin: 8px 8px;
+}
+
+.game-container img {
+	margin: inherit;
+	width: auto;
+	height: 100%;
+}
